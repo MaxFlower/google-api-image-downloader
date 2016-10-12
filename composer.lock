@@ -406,12 +406,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/google/google-api-php-client-services.git",
-                "reference": "c07a8a9d424024f1a9fc5d62da8ed5467ed25909"
+                "reference": "733275bdbed8c167c40408fefa8b87eadc447ac1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/google/google-api-php-client-services/zipball/c07a8a9d424024f1a9fc5d62da8ed5467ed25909",
-                "reference": "c07a8a9d424024f1a9fc5d62da8ed5467ed25909",
+                "url": "https://api.github.com/repos/google/google-api-php-client-services/zipball/733275bdbed8c167c40408fefa8b87eadc447ac1",
+                "reference": "733275bdbed8c167c40408fefa8b87eadc447ac1",
                 "shasum": ""
             },
             "require": {
@@ -432,7 +432,7 @@
             "keywords": [
                 "google"
             ],
-            "time": "2016-09-14 19:12:27"
+            "time": "2016-10-10 22:10:35"
         },
         {
             "name": "google/auth",
@@ -965,12 +965,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "607ce1d4005af32dd866c4a402459494c168d555"
+                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/607ce1d4005af32dd866c4a402459494c168d555",
-                "reference": "607ce1d4005af32dd866c4a402459494c168d555",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
+                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
                 "shasum": ""
             },
             "require": {
@@ -1004,7 +1004,7 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2016-09-25 13:41:54"
+            "time": "2016-10-10 12:19:37"
         },
         {
             "name": "react/promise",
@@ -1056,12 +1056,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "de19df332219d73a2704525ba75aabd7dfaa303b"
+                "reference": "a6d30977565081bc9b177b627bff2e2ba905224c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/de19df332219d73a2704525ba75aabd7dfaa303b",
-                "reference": "de19df332219d73a2704525ba75aabd7dfaa303b",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/a6d30977565081bc9b177b627bff2e2ba905224c",
+                "reference": "a6d30977565081bc9b177b627bff2e2ba905224c",
                 "shasum": ""
             },
             "require": {
@@ -1101,7 +1101,7 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2016-09-07 22:19:22"
+            "time": "2016-10-09 11:45:02"
         },
         {
             "name": "yiisoft/yii2",
@@ -1109,12 +1109,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "450c66353f450ac53755cd30c1d7135f5f7384d0"
+                "reference": "4a8854d3179cd89b994c575203c70a21fc93af70"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/450c66353f450ac53755cd30c1d7135f5f7384d0",
-                "reference": "450c66353f450ac53755cd30c1d7135f5f7384d0",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/4a8854d3179cd89b994c575203c70a21fc93af70",
+                "reference": "4a8854d3179cd89b994c575203c70a21fc93af70",
                 "shasum": ""
             },
             "require": {
@@ -1195,7 +1195,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2016-10-06 22:00:14"
+            "time": "2016-10-12 17:29:32"
         },
         {
             "name": "yiisoft/yii2-bootstrap",
@@ -1654,12 +1654,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fzaninotto/Faker.git",
-                "reference": "6e17ce075da9ace831033419a986cc81232ee08f"
+                "reference": "740e29c8185173bc90da8770d13d386ae20016bd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/6e17ce075da9ace831033419a986cc81232ee08f",
-                "reference": "6e17ce075da9ace831033419a986cc81232ee08f",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/740e29c8185173bc90da8770d13d386ae20016bd",
+                "reference": "740e29c8185173bc90da8770d13d386ae20016bd",
                 "shasum": ""
             },
             "require": {
@@ -1696,7 +1696,7 @@
                 "faker",
                 "fixtures"
             ],
-            "time": "2016-10-07 10:14:39"
+            "time": "2016-10-12 10:55:14"
         },
         {
             "name": "myclabs/deep-copy",
@@ -3140,12 +3140,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-debug.git",
-                "reference": "6ab1ba589298936d7bdd7dc63ceb3aada6e9c255"
+                "reference": "f84184d34bb679d3ba939a68be70f675de4f650f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/6ab1ba589298936d7bdd7dc63ceb3aada6e9c255",
-                "reference": "6ab1ba589298936d7bdd7dc63ceb3aada6e9c255",
+                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/f84184d34bb679d3ba939a68be70f675de4f650f",
+                "reference": "f84184d34bb679d3ba939a68be70f675de4f650f",
                 "shasum": ""
             },
             "require": {
@@ -3179,7 +3179,7 @@
                 "debugger",
                 "yii2"
             ],
-            "time": "2016-10-07 13:28:10"
+            "time": "2016-10-12 12:22:45"
         },
         {
             "name": "yiisoft/yii2-faker",
@@ -3234,12 +3234,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-gii.git",
-                "reference": "a5136efe5495dd1e941615e5c4a4ed09c44af194"
+                "reference": "a9e6c292e0bf1feb0538280f513e11bc3db876b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-gii/zipball/a5136efe5495dd1e941615e5c4a4ed09c44af194",
-                "reference": "a5136efe5495dd1e941615e5c4a4ed09c44af194",
+                "url": "https://api.github.com/repos/yiisoft/yii2-gii/zipball/a9e6c292e0bf1feb0538280f513e11bc3db876b6",
+                "reference": "a9e6c292e0bf1feb0538280f513e11bc3db876b6",
                 "shasum": ""
             },
             "require": {
@@ -3279,7 +3279,7 @@
                 "gii",
                 "yii2"
             ],
-            "time": "2016-09-05 12:04:28"
+            "time": "2016-10-10 10:46:33"
         }
     ],
     "aliases": [],
