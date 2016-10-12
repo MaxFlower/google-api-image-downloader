@@ -16,6 +16,8 @@ use Yii;
  */
 class Image extends \yii\db\ActiveRecord
 {
+    public $file;
+
     /**
      * @inheritdoc
      */
@@ -30,6 +32,7 @@ class Image extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
+            [['file'], 'file', 'extensions' => 'png, jpg'],
             [['title', 'link'], 'required'],
             [['bytesSize'], 'integer'],
             [['title', 'htmlTitle'], 'string', 'max' => 120],
