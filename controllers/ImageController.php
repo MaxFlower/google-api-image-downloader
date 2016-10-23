@@ -101,6 +101,10 @@ class ImageController extends Controller
      */
     public function actionDelete($id)
     {
+        $imageItem = $this->findModel($id);
+        $name = basename($imageItem->link);
+        $file = glob("uploads/$name");
+        unlink($file);
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);

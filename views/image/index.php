@@ -13,24 +13,25 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="image-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
-    <p>
-        <?= Html::a('Create Image', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
     <?php Pjax::begin(); ?>
     <?= GridView::widget([
-        'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
+        'dataProvider' => $dataProvider,        
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-
-            'id',
-            'title',
-            'htmlTitle',
+            'title',            
             'link',
             'bytesSize',
-            // 'thumbnailLink',
+            'thumbnailLink',
+            // [
+            //     'attribute' => 'Image',
+            //     'format' => 'raw',
+            //     'value' => function ($model) {   
+            //         if ($model->thumbnailLink!='') {
+            //             return '<img src="'. $model->thumbnailLink .'" width="50px" height="auto">'; else return 'no image';
+            //         }
+            //     },
+            // ],
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

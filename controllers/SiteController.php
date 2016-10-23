@@ -5,10 +5,12 @@ namespace app\controllers;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
+use yii\web\UploadedFile;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\QueryForm;
+use app\models\Image;
 use \Google_Client;
 use \Google_Service_Customsearch;
 
@@ -124,6 +126,7 @@ class SiteController extends Controller
     public function actionAbout()
     {
         $model = new QueryForm();
+        $image = new Image();
 
         $client = new Google_Client();
         $client->setApplicationName('TEST-APP');
@@ -133,14 +136,39 @@ class SiteController extends Controller
         $cse = $customerSearch->cse;
 
         if ($model->load(Yii::$app->request->post())) {
+            Image::deleteAll();
 
-            $results = $cse->listCse($model['query'], [                            
+            $files = glob('uploads/*'); // get all file names
+            foreach($files as $file){
+              if(is_file($file))
+                unlink($file); // delete file
+            }
+
+            $results = $cse->listCse($model['query'], [                      
                 'num' => '3',
                 'searchType' => 'image',
                 'cx' => '002574095571881191860:dd6urzagoou',
             ]);            
 
-            $dataProvider = $results['items'];                       
+            $dataProvider = $results['items'];
+
+            foreach ($dataProvider as $key => $item) {          
+                $image = new Image();
+                $image->title = $item->title;
+                $image->htmlTitle = $item->htmlTitle;
+                $image->link = $item->link;
+
+                $imageObject = $item->image;
+                $image->bytesSize = $imageObject->byteSize;
+                $image->thumbnailLink = $imageObject->thumbnailLink;
+
+                $image->save();
+
+                $url = $item->link;
+                $name = basename($url);
+                $data = file_get_contents($url);                
+                file_put_contents("uploads/$name", $data);
+            }                                   
         }
 
         return $this->render('about', [

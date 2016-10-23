@@ -29,12 +29,17 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
-            'title',
-            'htmlTitle',
+            'title',            
             'link',
             'bytesSize',
             'thumbnailLink',
         ],
     ]) ?>
+
+    <?php
+       if ($model->link!='') {
+         echo '<br /><p class="view-image"><img src="'.Yii::$app->homeUrl.'uploads/'.basename($model->link).'"></p>';
+       }    
+    ?>
 
 </div>
