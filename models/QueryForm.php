@@ -11,8 +11,7 @@ use yii\base\Model;
 class QueryForm extends Model
 {
     public $query;
-    public $maxResults = 50;
-
+    
     /**
      * @return array the validation rules.
      */

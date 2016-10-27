@@ -145,7 +145,7 @@ class SiteController extends Controller
             }
 
             $results = $cse->listCse($model['query'], [                      
-                'num' => '3',
+                'num' => '5',
                 'searchType' => 'image',
                 'cx' => '002574095571881191860:dd6urzagoou',
             ]);            

@@ -29,8 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
     ]); ?>
 
-        <?= $form->field($model, 'query')->textInput(['autofocus' => true]) ?>
-        <?= $form->field($model, 'maxResults')->Input('number') ?>
+        <?= $form->field($model, 'query')->textInput(['autofocus' => true]) ?>        
 
         <div class="form-group">
             <div class="col-lg-offset-1 col-lg-11">

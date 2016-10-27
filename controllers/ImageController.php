@@ -38,20 +38,33 @@ class ImageController extends Controller
         $searchModel = new ImageSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
-        return $this->render('index', [
-            'searchModel' => $searchModel,
+
+        return $this->render('index', [            
             'dataProvider' => $dataProvider,
+            'searchModel' => $searchModel
         ]);
     }
 
     /**
      * Displays a single Image model.
      * @param integer $id
-     * @return mixed
+     * @return model
      */
     public function actionView($id)
     {
         return $this->render('view', [
+            'model' => $this->findModel($id),
+        ]);
+    }
+
+    /**
+     * Displays model in modal window.
+     * @param integer $id
+     * @return mixed
+     */
+    public function actionModal($id)
+    {
+        return $this->renderAjax('modal', [
             'model' => $this->findModel($id),
         ]);
     }
@@ -102,11 +115,14 @@ class ImageController extends Controller
     public function actionDelete($id)
     {
         $imageItem = $this->findModel($id);
-        $name = basename($imageItem->link);
+        $name = $imageItem->link;
+        $name = basename($name);
         $file = glob("uploads/$name");
-        unlink($file);
-        $this->findModel($id)->delete();
-
+        if (is_file($file)) {
+            unlink($file);
+            $imageItem->delete();
+        }
+        
         return $this->redirect(['index']);
     }
 

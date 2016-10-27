@@ -47,6 +47,14 @@ class ImageSearch extends Image
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
+            'pagination' => [
+                'pageSize' => 5,
+            ],
+            'sort' => [
+                'defaultOrder' => [
+                    'id' => SORT_DESC,                
+                ]
+            ]
         ]);
 
         $this->load($params);
