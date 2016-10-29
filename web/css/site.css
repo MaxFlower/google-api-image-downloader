@@ -94,3 +94,15 @@ a.desc:after {
     height: auto;
     width: 600px;
 }
+
+.site-about .results-img {
+    display: inline-block;
+    height: auto;
+    margin-right: 20px;
+    width: 100px;    
+}
+
+.site-about .results-img img {
+    height: auto;
+    width: 100px;
+}

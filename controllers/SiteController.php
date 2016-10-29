@@ -136,18 +136,20 @@ class SiteController extends Controller
         $cse = $customerSearch->cse;
 
         if ($model->load(Yii::$app->request->post())) {
-            Image::deleteAll();
+            
 
             $files = glob('uploads/*'); // get all file names
             foreach($files as $file){
-              if(is_file($file))
+              if(is_file($file)) {
                 unlink($file); // delete file
+                Image::deleteAll();
+              }  
             }
 
             $results = $cse->listCse($model['query'], [                      
-                'num' => '5',
+                'num' => '10',
                 'searchType' => 'image',
-                'cx' => '002574095571881191860:dd6urzagoou',
+                'cx' => '002574095571881191860:dd6urzagoou'
             ]);            
 
             $dataProvider = $results['items'];

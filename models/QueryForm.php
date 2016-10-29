@@ -4,6 +4,7 @@ namespace app\models;
 
 use Yii;
 use yii\base\Model;
+use app\models\Image;
 
 /**
  * QueryForm is the model behind the query form.
@@ -11,6 +12,7 @@ use yii\base\Model;
 class QueryForm extends Model
 {
     public $query;
+    public $dataProvider;
     
     /**
      * @return array the validation rules.
@@ -31,5 +33,5 @@ class QueryForm extends Model
         return [
             'verifyCode' => 'Verification Code',
         ];
-    }
+    }    
 }

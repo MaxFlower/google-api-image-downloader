@@ -17,7 +17,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        This is the About page. You may modify the following file to customize its content:
+        Do request. First 10 images from Google-Search will be saved under 'upload' folder.<br/>
+        See results on the 'Result page':
     </p>
 
     <?php $form = ActiveForm::begin([
@@ -38,15 +39,16 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
 
     <?php ActiveForm::end(); ?>
+
+    <?php 
+        if ($dataProvider) {
+            echo "<h3>Request results:</h3><br /> \n";
+            foreach ($dataProvider as $item) {    
+              echo '<div class="results-img"><img src="' . $item['image']['thumbnailLink'] . '" ></div>';      
+            }
+        }
+    ?>
 </div>
 
-<?php 
-if ($dataProvider) {
-	foreach ($dataProvider as $item) {
-	  echo $item['htmlTitle'], "<br /> \n";
-	  echo '<img src="' . $item['image']['thumbnailLink'] . '" >';
-	  echo $item['link'], "<br /> \n"; 
-	}
-}
-?>
+
 
